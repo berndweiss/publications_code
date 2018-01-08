@@ -1,0 +1,46 @@
+#+title: Mobile Befragungen
+#+author: Bernd Weiss
+#+date: 2018-01-08
+
+#+property: header-args :results output :cache yes :session
+
+* Full bibliographic reference
+
+Weiß, B., Silber, H., Struminskaya, B., & Durrant, G. B. (2018). Mobile
+Befragungen. In N. Baur & J. Blasius (Hrsg.), Handbuch Methoden der empirischen
+Sozialforschung (S. xxxx–xxxx). Springer VS.
+
+
+* Getting started
+
+In order to replicate the statistical analyses, please load =000_index.R= into R
+and follow the instructions in section "+++ Configuration".
+
+* Content and file verification
+
+#+BEGIN_SRC R
+library(digest)
+f_list <- list.files()
+f_list
+#+END_SRC
+
+#+RESULTS[f10477b0dcc4cd75658764dd7af84825e1d3fede]:
+
+#+BEGIN_SRC R
+lapply(f_list, function(x){paste0(x, ": ", sha1(x))})
+#+END_SRC
+
+#+RESULTS[5b7555e1da495920fd781127ee9b0657bdd95826]:
+#+begin_example
+[[1]]
+[1] "000_index.R: 89c01489ff028de6551ad2d423af87688d83db8c"
+
+[[2]]
+[1] "100_init.R: 855521a4b01abcc301a0f3a8189f2dba325c8556"
+
+[[3]]
+[1] "300_ana.R: ca2d6e206d144988f846ddf0b24e76bc052046ed"
+
+[[4]]
+[1] "README.org: 8719a00b3e7513b05376c0cbd9ef73e23497b402"
+#+end_example
